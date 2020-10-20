@@ -70,11 +70,9 @@ public class LoveDialog extends Dialog {
             @Override
             public void onClick(View v) {
 //                sendMessage();
-                playAnimation3(relativeLayout1);
-
             }
         });
-
+        playAnimation3(relativeLayout1);
         timer = new Timer();
         task = new TimerTask() {
             @Override
@@ -92,7 +90,7 @@ public class LoveDialog extends Dialog {
     }
 
     public void playAnimation(View view, final int type) {
-        List<Animator> animators = new ArrayList<>();//设置一个装动画的集合
+        List<Animator> animators = new ArrayList<>(); // 设置一个装动画的集合
         final ObjectAnimator scaleX = ObjectAnimator.ofFloat(view, "scaleX", 0f, 1f);
         scaleX.setDuration(2000);//设置持续时间
         ObjectAnimator scaleY = ObjectAnimator.ofFloat(view, "scaleY", 0f, 1);

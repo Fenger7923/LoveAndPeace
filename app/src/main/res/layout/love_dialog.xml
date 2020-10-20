@@ -20,7 +20,7 @@
             android:layout_height="@dimen/p_300dp"
             android:scaleType="centerInside"
             android:paddingRight="@dimen/p_5dp"
-            android:src="@drawable/love_dialog"/>
+            android:src="@drawable/heart"/>
 
         <ImageView
             android:id="@+id/iv_yes"
@@ -64,7 +64,7 @@
             android:visibility="gone"
             android:lineSpacingMultiplier="1.2"
             android:layout_height="wrap_content"
-            android:text="你对我的爱\n我会誓死守护\n直到永远\nI Love You！"
+            android:text="这一片灿烂烟火\n只会因为你\n永远绽放！"
             android:textColor="#fff"
             android:textSize="@dimen/p_15sp"/>
 

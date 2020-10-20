@@ -39,7 +39,6 @@ import com.fenger.loveandpeace.utils.BazierTypeEvaluator;
 import com.fenger.loveandpeace.utils.LoveDialog;
 import com.fenger.loveandpeace.utils.TiaoZiUtil;
 import com.sdsmdg.tastytoast.TastyToast;
-import com.tencent.bugly.crashreport.CrashReport;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -112,7 +111,7 @@ public class LoveActivity extends AppCompatActivity {
 
 
                 tvTime.setText(Html.fromHtml(
-                        "<font><small><small><small>" + "相遇第" + "</small></small></small></font> " + day +
+                        "<font><small><small><small>" + " 和你的缘分从那一刻开始已经过去了<br/> " + "</small></small></small></font> " + day +
                                 " <font><small><small><small>" + "天" + "</small></small></small></font> " + hour +
                                 " <font><small><small><small>" + "小时" + "</small></small></small></font> " + minute +
                                 " <font><small><small><small>" + "分" + "</small></small></small></font> " + second +
@@ -122,13 +121,13 @@ public class LoveActivity extends AppCompatActivity {
                 Message message = handlerTime.obtainMessage(0);
                 handlerTime.sendMessageDelayed(message, 1000);
             } else if (msg.arg1 == 0) {
-                timeDifference("2020-04-10 20:00:00");
+                timeDifference("2020-03-27 17:07:00");
                 tvTime.setText(Html.fromHtml(
-                        "<font><small><small>" + "相遇第" + "</small></small></font> " + day +
+                        "<font><small><small>" + "<center>和你的缘分从那一刻开始已经过去了<center/><br/>" + " <center></small></small></font> &nbsp;&nbsp;" + day +
                                 " <font><small><small>" + "天" + "</small></small></font> " + hour +
                                 " <font><small><small>" + "小时" + "</small></small></font> " + minute +
                                 " <font><small><small>" + "分" + "</small></small></font> " + second +
-                                " <font><small><small>" + "秒" + "</small></small></font>"
+                                " <font><small><small>" + "秒" + "</small></small></font></center>"
                 ));
 
                 Message message = handlerTime.obtainMessage(0);
@@ -186,7 +185,7 @@ public class LoveActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                CrashReport.testJavaCrash();
                 String str = null;
-                str.toString();
+//                str.toString();
                 if (!isFast)
                     return;
 //                CrashReport.testJavaCrash();
@@ -233,7 +232,7 @@ public class LoveActivity extends AppCompatActivity {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                if (count > 620)
+                if (count > 550)
                     finish();
                 else {
                     if (!mediaPlayer.isPlaying()) {
@@ -776,7 +775,7 @@ public class LoveActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode==KeyEvent.KEYCODE_BACK||keyCode==KeyEvent.KEYCODE_HOME){
-            Toast toast = TastyToast.makeText(LoveActivity.this, "听完这首歌好不好？\n          ╥﹏╥", TastyToast.LENGTH_LONG, TastyToast.ERROR);
+            Toast toast = TastyToast.makeText(LoveActivity.this, "一定要听完这首歌好不好？\n          ╥﹏╥", TastyToast.LENGTH_LONG, TastyToast.ERROR);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         }
@@ -793,7 +792,7 @@ public class LoveActivity extends AppCompatActivity {
             } else if (intent.getAction().equals("com.dreamcool.loveup.UP_DIALOG_TIME")) {
                 count++;
                 if (count == 550)
-                    loveDialog.setTime("爱你");
+                    loveDialog.setTime("笔芯");
                 else if (count == 580)
                     loveDialog.setTime("白白");
                 else if (count <= 520)
@@ -803,7 +802,7 @@ public class LoveActivity extends AppCompatActivity {
                     if (loveDialog.isShowing()){
                         loveDialog.dismiss();
                         vBackground.setVisibility(View.GONE);
-                        Toast toast = TastyToast.makeText(LoveActivity.this, "一定要听完这首歌好不好？", TastyToast.LENGTH_LONG, TastyToast.WARNING);
+                        Toast toast = TastyToast.makeText(LoveActivity.this, "陪我听完这首歌好不好？", TastyToast.LENGTH_LONG, TastyToast.WARNING);
                         toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
 

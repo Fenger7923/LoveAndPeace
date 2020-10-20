@@ -52,9 +52,9 @@ public class SoulActivity extends AppCompatActivity {
         soulPlanet.setOnTagClickListener(new SoulPlanetsView.OnTagClickListener() {
             @Override
             public void onItemClick(ViewGroup parent, View view, int position) {
-                Intent intent1 = new Intent(SoulActivity.this,LoveActivity.class);
-                SoulActivity.this.startActivity(intent1);
-//                Toast.makeText(SoulActivity.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
+//                Intent intent1 = new Intent(SoulActivity.this,LoveActivity.class);
+//                SoulActivity.this.startActivity(intent1);
+                Toast.makeText(SoulActivity.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
 //                switch (position){
 //                    case 0:
 //                        Intent intent1 = new Intent(SoulActivity.this,LoveActivity.class);

@@ -226,7 +226,7 @@ public class SoulPlanetsView extends ViewGroup implements Runnable, PlanetAdapte
     }
 
     /**
-     * 谁知适配器
+     * 设置适配器
      *
      * @param adapter 适配器
      */
@@ -490,7 +490,7 @@ public class SoulPlanetsView extends ViewGroup implements Runnable, PlanetAdapte
         }
         handler.removeCallbacksAndMessages(null);
         // 延时
-        handler.postDelayed(this, 30);
+        handler.postDelayed(this, 16);
     }
 
     /**

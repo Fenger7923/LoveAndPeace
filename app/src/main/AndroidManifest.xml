@@ -21,7 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoveActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +30,7 @@
         </activity>
         <activity android:name=".SoulActivity"
             android:launchMode = "singleTask"/>
-        <activity android:name=".LoveActivity"
+        <activity android:name=".MainActivity"
             android:launchMode="singleInstance"/>
         <activity android:name=".FindMeActivity"/>
         <activity android:name=".FinalActivity"/>
